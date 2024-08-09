@@ -23,6 +23,12 @@ const db =getDatabase();
 
 
 
+    /*
+    if(localStorage.getItem('AlreadyFollowLink')!=null){
+     let url="https://t.me/Realcoingames_bot";
+     window.open(url,"_blank").focus();
+    }
+    */
 
 
 
@@ -55,12 +61,6 @@ document.querySelector('.realCoinsLink_CD_button').addEventListener('click',()=>
 
 
 
-    /*
-    if(localStorage.getItem('AlreadyFollowLink')!=null){
-     let url="https://t.me/Realcoingames_bot";
-     window.open(url,"_blank").focus();
-    }
-    */
     
 
 
