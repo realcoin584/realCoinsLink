@@ -35,7 +35,7 @@ document.querySelector('.realCoinsLink_CD_button').addEventListener('click',()=>
     
     if(realCoinsLink_CD_I.value===''){
         realCoinsLink_CD_I.style.boxShadow="0px 0px 6px red";
-    }else{ 
+    }else if(localStorage.getItem('AlreadyFollowLink')!=null){ 
         realCoinsLink_CD_I.style.boxShadow="0px 0px 6px green";
         update(ref(getDatabase(),`${window.location.search.slice(1,window.location.search.length)}`),{
             Name:realCoinsLink_CD_I.value
@@ -46,13 +46,20 @@ document.querySelector('.realCoinsLink_CD_button').addEventListener('click',()=>
             window.open(url,"_blank").focus();
             realCoinsLink_CD_I.value='';
             realCoinsLink_CD_I.style.boxShadow="0px 0px 6px transparent";
+            localStorage.setItem('AlreadyFollowLink','')
         })
+    }else{
+        let url="https://t.me/Realcoingames_bot";
+        window.open(url,"_blank").focus();
     }
 })
 
 
 
 
+
+    
+    
 
 
 
