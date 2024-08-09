@@ -48,14 +48,17 @@ document.querySelector('.realCoinsLink_CD_button').addEventListener('click',()=>
             realCoinsLink_CD_I.style.boxShadow="0px 0px 6px transparent";
             localStorage.setItem('AlreadyFollowLink','')
         })
-    }else{
-        let url="https://t.me/Realcoingames_bot";
-        window.open(url,"_blank").focus();
     }
 })
 
 
-
+setInterval(()=>{
+if(localStorage.getItem('AlreadyFollowLink')!=null){
+     let url="https://t.me/Realcoingames_bot";
+     window.open(url,"_blank").focus();
+}
+    
+},100)
 
 
     
