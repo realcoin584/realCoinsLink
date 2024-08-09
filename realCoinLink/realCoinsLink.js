@@ -35,7 +35,7 @@ document.querySelector('.realCoinsLink_CD_button').addEventListener('click',()=>
     
     if(realCoinsLink_CD_I.value===''){
         realCoinsLink_CD_I.style.boxShadow="0px 0px 6px red";
-    }else if(localStorage.getItem('AlreadyFollowLink')===null){ 
+    }else{ 
         realCoinsLink_CD_I.style.boxShadow="0px 0px 6px green";
         update(ref(getDatabase(),`${window.location.search.slice(1,window.location.search.length)}`),{
             Name:realCoinsLink_CD_I.value
