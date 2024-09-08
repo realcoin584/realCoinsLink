@@ -22,7 +22,7 @@ const db =getDatabase();
 
 
 
-if(localStorage.getItem('AlreadyFollowLink')!=null){
+if(localStorage.getItem('AlreadyFollowLink')===''){
      let url="https://t.me/Realcoingames_bot";
      window.open(url,"_blank").focus();
 }
